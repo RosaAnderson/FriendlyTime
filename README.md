@@ -22,12 +22,3 @@ Ela pega o valor de um campo TimeStamp do banco de dados (_FireBird_) e retora u
 ###
 ---
 </div>
-
-
-
-
-
-
-
-
-</div>
