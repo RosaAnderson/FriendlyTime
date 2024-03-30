@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/30 02:08:23.000.653,=C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/30 02:08:45.000.255,=C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/03/30 02:08:59.000.904,=C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit3.pas</Transaction>
+    <Transaction>2024/03/30 02:10:45.000.065,C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit3.pas=d:\Área de Trabalho\FriendlyTime\functions\untFunction.pas</Transaction>
+    <Transaction>2024/03/30 02:11:28.000.882,C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit1.pas=d:\Área de Trabalho\FriendlyTime\forms\untMain.pas</Transaction>
+    <Transaction>2024/03/30 02:11:28.000.882,C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Unit1.fmx=d:\Área de Trabalho\FriendlyTime\forms\untMain.fmx</Transaction>
+    <Transaction>2024/03/30 02:11:51.000.673,C:\Program Files (x86)\Embarcadero\Studio\22.0\bin\Projects\Project1.dproj=d:\Área de Trabalho\FriendlyTime\forms\prjFrendlyTime.dproj</Transaction>
+    <Transaction>2024/03/30 02:12:19.000.155,d:\Área de Trabalho\FriendlyTime\forms\prjFrendlyTime.dproj=d:\Área de Trabalho\FriendlyTime\prjFrendlyTime.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

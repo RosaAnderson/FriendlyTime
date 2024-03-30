@@ -1,0 +1,72 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Frendly Time'
+  ClientHeight = 168
+  ClientWidth = 587
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 587.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object DateEdit1: TDateEdit
+      Date = 45381.000000000000000000
+      OnChange = FTChange
+      Align = Client
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+      TabOrder = 0
+      TextSettings.Font.Size = 36.000000000000000000
+      TextSettings.HorzAlign = Center
+    end
+    object TimeEdit1: TTimeEdit
+      Time = 0.093335057870370370
+      OnChange = FTChange
+      Align = Right
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 376.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 203.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Size = 36.000000000000000000
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 74.000000000000000000
+    Size.Width = 587.000000000000000000
+    Size.Height = 94.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 587.000000000000000000
+      Size.Height = 94.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.HorzAlign = Center
+      TabOrder = 0
+    end
+  end
+end
