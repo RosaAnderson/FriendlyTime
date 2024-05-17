@@ -41,55 +41,45 @@ begin
     vMinuteR := StrToInt(FormatDateTime('nn', vfDateTime));
     vSecondR := StrToInt(FormatDateTime('ss', vfDateTime));
 
-
     // define a string de tempo inicial
-    Result := FormatDateTime('d', vfDateTime) + ' de ' + FormatDateTime('mmm', vfDateTime) + ' de ' + FormatDateTime('yyyy', vfDateTime);
+    Result := FormatDateTime('d', vfDateTime) + ' de ' +
+                  FormatDateTime('mmm', vfDateTime) + ' de ' +
+                      FormatDateTime('yyyy', vfDateTime);
 
-    // se o ano atual for igual ao ano recebido
-    if vYearN = vYearR then
+    if vYearN = vYearR then // se o ano atual for igual ao ano recebido
     begin
-        // se o mes atual for igual ao mes recebido
-        if vMonthN = vMonthR then
+        if vMonthN = vMonthR then // se o mes atual for igual ao mes recebido
         begin
-            // se o dia atual for igual ao dia recebido
-            if vDayN = vDayR then
+            if vDayN = vDayR then // se o dia atual for igual ao dia recebido
             begin
-                // se a hora atual for igual a hora recebida
-                if vHourN = vHourR then
+                if vHourN = vHourR then // se a hora atual for igual a hora recebida
                 begin
                     // se o minuto atual for igual ao minuto recebido
                     if vMinuteN = vMinuteR then
                     begin
-                        // mostra a string de tempo
-                        Result := 'h· menos de um minuto.';
+                        Result := 'h√° menos de um minuto.'; // mostra a string de tempo
 
-                        // verifica se o tempo decorrido È menor que 10 segundos
-                        if (vSecondN - vSecondR) < 10 then
-                            Result := 'h· pouco.' // mostra a string de tempo
-
-                        // verifica se o tempo decorrido È menor que 20 seggundos
-                        else if (vSecondN - vSecondR) < 20 then
-                            Result := 'segundos atr·s.'; // mostra a string de tempo
+                        if (vSecondN - vSecondR) < 10 then // verifica se o tempo decorrido √© menor que 10 segundos
+                            Result := 'h√° pouco.' // mostra a string de tempo
+                        else
+                        if (vSecondN - vSecondR) < 20 then // verifica se o tempo decorrido √© menor que 20 seggundos
+                            Result := 'segundos atr√°s.'; // mostra a string de tempo
                     end
                     else
                     begin
-                        // mostra a string de tempo
-                        Result := 'h· menos de um minuto.';
+                        Result := 'h√° menos de um minuto.'; // mostra a string de tempo
 
                         // define o tempo em segundos
                         vTimeN := (vMinuteN * 60) + vSecondN;
                         vTimeR := (vMinuteR * 60) + vSecondR;
 
-                        // calcula o tempo passado
-                        vMinuteA := Trunc((vTimeN - vTimeR) / 60);
+                        vMinuteA := Trunc((vTimeN - vTimeR) / 60); // calcula o tempo passado
 
-                        // verifica se o tempo decorrido È igual a 1 minuto
-                        if vMinuteA = 1 then
-                            Result := 'um minuto atr·s.' // mostra a string de tempo
-
-                        // verifica se o tempo decorrido È maior que 1 minuto
-                        else if vMinuteA > 1 then
-                            Result := IntToStr(vMinuteA) + ' minutos atr·s.'; // mostra a string de tempo
+                        if vMinuteA = 1 then // verifica se o tempo decorrido √© igual a 1 minuto
+                            Result := 'um minuto atr√°s.' // mostra a string de tempo
+                        else
+                        if vMinuteA > 1 then // verifica se o tempo decorrido √© maior que 1 minuto
+                            Result := IntToStr(vMinuteA) + ' minutos atr√°s.'; // mostra a string de tempo
                     end;
                 end
                 else
@@ -98,42 +88,32 @@ begin
                     vTimeN := (vHourN * 60) + vMinuteN;
                     vTimeR := (vHourR * 60) + vMinuteR;
 
-                    // calcula o tempo passado
-                    vHourA := vTimeN - vTimeR;
+                    vHourA := vTimeN - vTimeR; // calcula o tempo passado
 
-                    // verifica se o tempo passado È menor que 1 hora
-                    if vHourA < 60 then
+                    if vHourA < 60 then // verifica se o tempo passado √© menor que 1 hora
                     begin
-                        // define o tempo passado
-                        vMinuteA := vHourA;
+                        vMinuteA := vHourA; // define o tempo passado
 
-                        // verifica se o tempo decorrido È igual a 1 minuto
-                        if vMinuteA = 1 then
-                            Result := 'um minuto atr·s.' // mostra a string de tempo
-
-                        // verifica se o tempo decorrido È maior que 1 minuto
-                        else if vMinuteA > 1 then
-                            Result := IntToStr(vMinuteA) + ' minutos atr·s.'; // mostra a string de tempo
+                        if vMinuteA = 1 then // verifica se o tempo decorrido √© igual a 1 minuto
+                            Result := 'um minuto atr√°s.' // mostra a string de tempo
+                        else
+                        if vMinuteA > 1 then // verifica se o tempo decorrido √© maior que 1 minuto
+                            Result := IntToStr(vMinuteA) + ' minutos atr√°s.'; // mostra a string de tempo
                     end
-
-                    // verifica se o tempo decorrido È igual a 60 minutos
-                    else if vHourA = 60 then
+                    else
+                    if vHourA = 60 then // verifica se o tempo decorrido √© igual a 60 minutos
                     begin
-                        Result := 'uma hora atr·s.'; // mostra a string de tempo
+                        Result := 'uma hora atr√°s.'; // mostra a string de tempo
                     end
-
-                    // verifica se o tempo passado È maior que 60 minutos
-                    else if vHourA > 60 then
+                    else
+                    if vHourA > 60 then // verifica se o tempo passado √© maior que 60 minutos
                     begin
-                        // calcula o tempo em hora
-                        vHourA := Trunc(vHourA / 60);
+                        vHourA := Trunc(vHourA / 60); // calcula o tempo em hora
+                        
+                        Result := 'uma hora atr√°s.'; // mostra a string de tempo
 
-                        // mostra a string de tempo
-                        Result := 'uma hora atr·s.';
-
-                        // verifica se o tempo decorrido È maior q 1 hora
-                        if vHourA > 1 then
-                            Result := IntToStr(vHourA) + ' horas atr·s.';// mostra a string de tempo
+                        if vHourA > 1 then // verifica se o tempo decorrido √© maior q 1 hora
+                            Result := IntToStr(vHourA) + ' horas atr√°s.'; // mostra a string de tempo
                     end;
                 end;
             end;
